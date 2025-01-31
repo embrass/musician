@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Артисты</title>
+</head>
+<body>
+    <div>
+        {%for i in concert %}
+        <div>
+            <h3>{{concert.name}}</h3>
+            <h3>{{concert.locations}}</h3>
+            <h3>{{concert.date_to}}</h3>
+            <h3>{{concert.cost}}</h3>
+
+        </div>
+        {% end for %}
+    </div>
+</body>
+</html>
