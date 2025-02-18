@@ -23,6 +23,7 @@ if config.config_file_name is not None:
 from app.backend.db import Base
 from app.musician import musician
 from app.concert import concert
+from app.users.models import Users
 
 target_metadata = Base.metadata
 

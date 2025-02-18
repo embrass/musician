@@ -1,22 +1,13 @@
 from fastapi import APIRouter
 
+from app.concert.dao import ConcertDAO
+
 router = APIRouter(
     prefix="/concert",
     tags=["Концерты"]
 )
 
 
-@router.get("/{name}/{city}/{stage}")
-def get_id(name: str, city: str, stage: str):
-    return [
-        {"Выступает": name},
-        {"В этом городе": city},
-        {"На площадке": stage},
-    ]
-
-
-@router.get("/all")
-async def get_all_concert(
-
-):
-    pass
+@router.get("")
+async def get_id():
+    return await ConcertDAO.find_by_id(1)

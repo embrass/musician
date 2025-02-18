@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from app.users.schemas import *
 
 
@@ -11,4 +11,4 @@ router = APIRouter(
 
 @router.post("/register")
 async def register_user(user_data: SUser):
-    pass
+    existing_user =
