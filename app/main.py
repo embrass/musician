@@ -5,14 +5,17 @@ from app.musician.router import router as musicians
 from app.concert.router import router as concert
 from app.pages.router import router as concerts
 from app.image.router import router as images
+from app.users.router import router as users
 from fastapi import FastAPI
+
 
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="app/static"), "static")
+#app.mount("/static", StaticFiles(directory="app/static"), "static")
 
+app.include_router(users)
 app.include_router(musicians)
 app.include_router(musicians)
 app.include_router(images)

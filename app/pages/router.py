@@ -5,7 +5,7 @@ from fastapi.templating import Jinja2Templates
 
 
 router = APIRouter(
-    tags=["Frontend"],
+    tags=["Фронт"],
     prefix="/pages"
 )
 
