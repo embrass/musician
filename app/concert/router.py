@@ -4,7 +4,7 @@ from app.concert.dao import ConcertDAO
 
 router = APIRouter(
     prefix="/concert",
-    tags=["Концерты"]
+    tags=["Concert"]
 )
 
 

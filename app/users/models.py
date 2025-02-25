@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-
 from app.backend.db import Base
 
 
@@ -12,7 +11,5 @@ class Users(Base):
     hashed_password = Column(String, nullable=False)
 
     musician = relationship("Musician", back_populates="user")
-
-    #booking = relationship("Bookings", back_populates="user")
 
 

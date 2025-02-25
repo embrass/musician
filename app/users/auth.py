@@ -3,9 +3,6 @@ from datetime import datetime, timedelta
 from jose import jwt
 from app.users.dao import UsersDAO
 from pydantic import EmailStr
-#from app.config import Settings
-from fastapi import APIRouter, HTTPException
-from app.users.schemas import SUserAuth
 
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated='auto')

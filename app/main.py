@@ -1,5 +1,3 @@
-# uvicorn app.main:feedback.app --reload port 8001
-# uvicorn app.main:app --reload
 #uvicorn app.main:app --reload
 from app.musician.router import router as musicians
 from app.concert.router import router as concert
@@ -8,12 +6,8 @@ from app.image.router import router as images
 from app.users.router import router as users
 from fastapi import FastAPI
 
-
-from fastapi.staticfiles import StaticFiles
-
 app = FastAPI()
 
-#app.mount("/static", StaticFiles(directory="app/static"), "static")
 
 app.include_router(users)
 app.include_router(musicians)

@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter(
     prefix="/musician",
-    tags=["Музыканты"]
+    tags=["Musician"]
 )
 
 

@@ -1,9 +1,5 @@
-
 from app.backend.db import async_session_maker
-
 from sqlalchemy import select, insert
-
-
 
 
 class BaseDAO:

@@ -18,6 +18,3 @@ async def get_concert(
         concert=Depends()
 ):
     return templates.TemplateResponse(name="concert.html", context={"request": request})
-
-
-#get_hotels_by_location_and_time
